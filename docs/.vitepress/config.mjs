@@ -2,7 +2,7 @@
  * @Author: jauntyjinn 2324935200@qq.com
  * @Date: 2026-05-30 17:33:33
  * @LastEditors: jauntyjinn 2324935200@qq.com
- * @LastEditTime: 2026-05-30 17:59:46
+ * @LastEditTime: 2026-05-31 13:41:26
  * @FilePath: \undefinedd:\mysite\jauntysite\docs\.vitepress\config.mjs
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,7 +12,8 @@ export default defineConfig({
   title: "Everything about JAUNTYJINN",
   description: "宝盖的碎碎念",
   lang: 'zh-CN',
-
+  base: '/jauntysite/',  // 和你的仓库名一致
+  title: "Everything about JAUNTYJINN",
   // 顶部导航栏
   themeConfig: {
     nav: [
