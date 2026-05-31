@@ -1,0 +1,153 @@
+/* ================================================
+   0. 字体引入
+   ================================================ */
+@import url('https://fonts.loli.net/css2?family=LXGW+WenKai&display=swap');
+
+:root {
+  --vp-font-family-base: 'LXGW WenKai', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ================================================
+   1. 橙色主题色
+   ================================================ */
+
+:root {
+  --vp-c-brand-1: #f97316;
+  --vp-c-brand-2: #fb923c;
+  --vp-c-brand-3: #fdba74;
+  --vp-c-brand-soft: rgba(249, 115, 22, 0.14);
+
+  --vp-button-brand-bg: #f97316;
+  --vp-button-brand-hover-bg: #ea6c0a;
+  --vp-button-brand-active-bg: #c2550a;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+
+  --vp-nav-bg-color: #fef3c7;   /* 浅橙黄，和你的页面色调一致 */
+}
+
+.dark {
+  --vp-c-brand-1: #fb923c;
+  --vp-c-brand-2: #f97316;
+  --vp-c-brand-3: #ea580c;
+  --vp-c-brand-soft: rgba(249, 115, 22, 0.16);
+}
+
+
+/* ================================================
+   2. 全页背景图
+   ================================================ */
+.VPHome {
+  background-color: #f7e526;  /* 黄色底色，图片没覆盖到的地方显示这个 */
+  background-image: url('/jauntysite/hero-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* 删掉了 background-attachment: fixed */
+}
+
+
+
+/* ================================================
+   3. Features 卡片封面图
+   ================================================ */
+
+.VPFeature {
+  overflow: hidden;
+  padding: 0 !important;
+  position: relative;  /* 关键：给绝对定位提供参照 */
+}
+
+/* 用 padding-top 撑出 4:3 比例 */
+.VPFeature::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 75%;  /* 4:3 = 75% */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 文字层绝对定位，覆盖在图片上 */
+.VPFeature {
+  position: relative !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.VPFeature .box {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  text-align: center;
+  padding: 24px;
+}
+
+.VPFeature .box .title {
+  color: #080303;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.VPFeature .box .details {
+  color: rgba(8, 1, 1, 0.85);
+  font-size: 0.9rem;
+}
+
+/* 各卡片图片 */
+.items .item:nth-of-type(1) .VPFeature::before {
+  background-image: url('/jauntysite/courses.jpg');
+}
+
+.items .item:nth-of-type(2) .VPFeature::before {
+  background-image: url('/jauntysite/study.jpg');
+}
+
+.items .item:nth-of-type(3) .VPFeature::before {
+  background-image: url('/jauntysite/art.jpg');
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.25);
+}
+
+
+/* 非首页背景色 */
+.VPDoc {
+  background-color: #fffbeb;
+}
+
+.VPContent {
+  background-color: #fffbeb;
+}
+
+/* 侧边栏背景 */
+.VPSidebar {
+  background-color: #fff0bf !important;
+}
+
+/* 整体页面背景 */
+body {
+  background-color: #fffbeb;
+}
+
+.VPNavBar {
+  background-color: #fef3c7 !important;
+}
+
+.VPNavBar .curtain {
+  background-color: #fef3c7 !important;
+}
+
+/* 有时候是这个伪元素 */
+.VPNavBar::before {
+  background-color: #fef3c7 !important;
+}

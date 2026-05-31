@@ -17,9 +17,12 @@ hero:
 features:
   - title: 课程笔记
     details: 学习宝盖
+    link: /courses/
   - title: 项目与技术
     details: 打工宝盖
+    link: /study/
   - title: 书影音
     details: 享受宝盖
+    link: /art/
 ---
 
